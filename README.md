@@ -36,6 +36,14 @@ Há várias vantagens de um [sistema de contabilidade baseado em texto](http://p
 
 - **Decentralização**: Não há problemas de se separar o registro em diferentes arquivos.  Os registros podem ser feitos por diretório, grupo de trabalho ou até mesmo individualmente.
 
+# Escopo do Projeto
+* contabilidade gerencial
+* ferramentas de entrada de dados para diversos dispositivos
+* geração de relatórios para a contabilidade financeira
+## O que não faz parte do Escopo
+* A contabilidade financeira que deve ser enviada para o TSE
+* Cadastros de Colaboradores, Doadores e Fornecedores; e outros cadastros
+
 
 # Visão do Projeto
 
