@@ -1,4 +1,4 @@
-* http://partidopirata.org/doacoes/transparencia/ (conforme [1])
+* http://partidopirata.org/doacoes/transparencia/ (conforme [#1])
 * http://plaintextaccounting.org
 * https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html
 * https://github.com/conservancy/npo-ledger-cli
