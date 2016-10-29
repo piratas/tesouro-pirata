@@ -48,7 +48,6 @@ alias poupança= Ativos:Conta:Poupança:CEF 0997/013/00015043-0
     ; aparentemente, essa despesa é em dólar ou outra moeda estrangeira, no futuro,
     ; o melhor é colocar a despesa na moeda(commodity) em
     ; que é cobrada e mostrar conversão.
-
     poupança
     ; dúvida: não pagou com cartão de crédito?  Que cartão é esse?
     ; coloquei como quem pagou foi a conta poupança
