@@ -1,0 +1,5 @@
+; -*- ledger -*-
+; -*- coding: utf-8 -*-
+
+!include config-piratas.ledger
+!include brasil.ledger
