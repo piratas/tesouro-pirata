@@ -1,0 +1,63 @@
+; brasil.ledger
+; Mantém as contas da Tesouraria Nacional do Piratas.
+
+;====== Configurações ======
+; Definindo a commodity padrão (Real Brasileiro)
+D R$ 1.000,00
+
+; Criando alias para facilitar a entrade de dados
+
+alias conta= Ativos:Conta:Corrente:CEF 0997/013/00015043-0
+alias poupança= Ativos:Conta:Poupança:CEF 0997/013/00015043-0
+; dúvida: A conta corrente e a conta poupança tem mesmo número?
+; Ou é uma conta corrente?  Ou é poupança?
+
+
+
+;====== Início ======
+
+2014/07/28 Estado inicial Tesouraria Bombardelli e Buratto
+    poupança      4882
+    Patrimônio:Inicial
+    ;assume que essa conta é poupança, uma vez que há nos meses subsequentes
+    ;um rendimento. Seria bom verificar.
+
+2014/07/28 (#1) Pagamento de Servidor no Exterior
+    Despesas:Serviços e Utilidades  94,28   ;destino
+    poupança                                  ;origem
+    ; dúvida: não pagou com cartão de crédito?  Que cartão é esse?
+    ; coloquei como quem pagou foi a conta poupança
+
+2014/07/28 (ref #1) IOF
+    Passivo:Obrigações Fiscais:IOF  6,02
+    poupança
+    ; mesma dúvida, isso deveria estar no cartão.
+
+2014/07/28 Escritório Virtual em Bsb
+    Despesas:Aluguéis e Condomínios  189
+    ; será que é melhor colocar em aluguéis e condomínios ou em serviços, afinal é um
+    ; escritório virtual
+    poupança
+
+2014/08/28    Rendimento da poupança
+    poupança  29,5
+    Receitas:Rendimentos
+
+2014/08/28 (#2) Pagamento de Servidor no Exterior
+    Despesas:Serviços e Utilidades  93,47
+    ; aparentemente, essa despesa é em dólar ou outra moeda estrangeira, no futuro,
+    ; o melhor é colocar a despesa na moeda(commodity) em
+    ; que é cobrada e mostrar conversão.
+    poupança
+    ; dúvida: não pagou com cartão de crédito?  Que cartão é esse?
+    ; coloquei como quem pagou foi a conta poupança
+
+2014/08/28 (ref #2) IOF
+    Passivo:Obrigações Fiscais:IOF  6,02
+    poupança
+    ; mesma dúvida, isso deveria estar no cartão.
+
+
+2014/09/28    Rendimento da poupança
+    poupança  27,41
+    Receitas:Rendimentos
