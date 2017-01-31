@@ -1,0 +1,13 @@
+version: '2'
+services:
+  hledger:
+    build:
+      context: docker-hledger
+      dockerfile: Dockerfile
+    volumes:
+      - "./docker-hledger/data:/data"
+    restart: always
+    environment:
+      - HLEDGER_PORT=42086
+    ports:
+      - "42086:42086"
