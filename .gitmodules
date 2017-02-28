@@ -1,3 +1,0 @@
-[submodule "docker-hledger"]
-	path = docker-hledger
-	url = git@github.com:j3k0/docker-hledger.git

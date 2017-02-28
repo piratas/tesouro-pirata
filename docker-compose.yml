@@ -1,13 +1,14 @@
-version: '2'
+version: '3'
 services:
-  hledger:
-    build:
-      context: docker-hledger
-      dockerfile: Dockerfile
+  fava:
+    build: .
     volumes:
-      - "./docker-hledger/data:/data"
+      - "./data:/data"
     restart: always
     environment:
-      - HLEDGER_PORT=42086
+      - "BEANCOUNT_INPUT_FILE=/data/tesouraria.beancount"
+      - "BEANCOUNT_TITLE=Partido Pirata"
+      - "BEANCOUNT_CURRENCY=BRL"
     ports:
-      - "42086:42086"
+      - "42085:5000"
+    restart: always
